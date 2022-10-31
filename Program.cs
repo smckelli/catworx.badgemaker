@@ -9,14 +9,14 @@ namespace CatWorx.BadgeMaker
             {
             List<string> employees = new List<string>();
                 // Collect user values until the value is an empty string
-                while (true)
-                {
+                    while (true)
+                    {
                     Console.WriteLine("Please enter a name: (leave empty to exit): ");
                     string input = Console.ReadLine() ?? "";
                     // Break if the user hits ENTER without typing a name
-                    if (input == "")
+                    if (input == "") 
                     {
-                        break;}
+                        break;
                     }
                     employees.Add(input);
                 } 
@@ -24,5 +24,6 @@ namespace CatWorx.BadgeMaker
                 {
                     Console.WriteLine(employees[i]);
                 }
+            }
     }
 }
