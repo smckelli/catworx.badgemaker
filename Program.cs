@@ -7,7 +7,17 @@ namespace CatWorx.BadgeMaker
     {
         static void Main(string[] args)
             {
-            List<string> employees = new List<string>();
+                  // This is our employee-getting code now
+                List<string> employees = GetEmployees();
+
+                for (int i = 0; i < employees.Count; i++) 
+                {
+                    Console.WriteLine(employees[i]);
+                }
+            }
+        static List<string> GetEmployees()
+        {
+        List<string> employees = new List<string>();
                 // Collect user values until the value is an empty string
                     while (true)
                     {
@@ -20,10 +30,18 @@ namespace CatWorx.BadgeMaker
                     }
                     employees.Add(input);
                 } 
-                for (int i = 0; i < employees.Count; i++) 
-                {
-                    Console.WriteLine(employees[i]);
-                }
-            }
+
+                return employees;
+        }
+
+        static void PrintEmployees(List<string> employees)
+        {
+        for (int i = 0; i < employees.Count; i++) 
+        {
+
+            Console.WriteLine(employees[i]);
+
+        }
+}
     }
 }
